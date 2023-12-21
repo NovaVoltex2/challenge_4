@@ -1,0 +1,288 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Space Grotesk', sans-serif;
+	
+}
+:root{
+	--white:hsl(0, 0%, 100%);
+	--Lgv:hsl(270, 3%, 87%);
+	--Dgv:hsl(279, 6%, 55%);
+	--Vdv:hsl(278, 68%, 11%);
+	--stdfont:18px;
+	--grad1:hsl(249, 99%, 64%);
+	--grad2:hsl(278, 90%, 20%);
+	--error:hsl(0, 100%, 66%);
+}
+/*- Mobile: 375px
+- Desktop: 1440px*/
+
+@font-face {
+	font-family:'Space Grotesk' ;
+	src: url(https://fonts.google.com/specimen/Space+Grotesk);
+}
+
+main{
+	height: 100vh;
+	display: flex;
+}
+#cardzone{
+	background-image: url('./images/bg-main-desktop.png');
+	width: 30%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.card{
+	width: 430px;
+	height: 230px;
+	position: absolute;
+	border-radius: 10px;
+}
+.frontcard{
+	top: 10%;
+	left: 40%;
+	background-image: url('./images/bg-card-front.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding:0px 30px;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: space-around;
+	box-shadow: 0 0 25px 0 #0000003e;
+}
+
+.ditails{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.ditails .num{
+	width: 100%;
+	align-items: center;
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.ditails .subditails{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+.backcard{
+	top: 44%;
+	left: 60%;
+	background-image: url('./images/bg-card-back.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding: 55px;
+	box-shadow: 0 0 25px 0 #0000003e;
+}
+.backcard p{
+	color: #fff;
+}
+#inputzone{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: relative;
+}
+#inputzone label{
+	font-weight: 600;
+	font-size: 11px;
+	color: var(--Vdv);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#inputzone form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 20rem;
+
+}
+
+#inputzone form div{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+#inputzone form div input{
+	padding: 12px 8px;
+	border: 2px solid var(--Lgv);
+	border-radius: 8px;
+	width: 100%;
+}
+
+#carddits{
+	display: flex;
+	gap: 15px;
+}
+#carddits .info1 div{
+	display: grid;
+	gap: 1px;
+	grid-template-columns: repeat(2,1fr);
+}
+#carddits .info1 div input{
+	width: 70px;
+}
+button{
+	padding: 15px;
+	border: none;
+	background-color: var(--Vdv);
+	color: #fff;
+	font-weight: 500;
+	border-radius: 8px;
+}
+button:hover{
+	background-color: var(--grad2);
+	cursor: pointer;
+}
+#complete{
+	position: absolute;
+	background-color:var(--white);
+	display: flex;
+	flex-direction: column;
+	width:  30rem;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	transition:transform 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#complete h3{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 500;
+	color: var(--Vdv);
+}
+#complete p{
+	margin-bottom: 20px;
+	font-weight: 600;
+	color: var(--Dgv);
+}
+#complete button{
+	width: 70%;
+}
+.error{
+	color: var(--error);
+	font-size: 12px;
+	display: none;
+}
+.show{
+	transform: scale(1);
+}
+.hide{
+	transform: scale(0);
+}
+@media (max-width:675px ) {
+	main{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	gap: 70px;
+}
+.card{
+	width: 80%;
+	height: 70%;
+	position: absolute;
+	border-radius: 10px;
+}
+#cardzone{
+	background-image: url('./images/bg-main-mobile.png');
+	width: 100%;
+	height: 30%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.frontcard{
+	top: 50%;
+	left: 5%;
+	background-image: url('./images/bg-card-front.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding:0px 30px;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: space-around;
+	box-shadow: 0 0 25px 0 #0000003e;
+	z-index: 4;
+}
+
+.ditails{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.ditails .num{
+	width: 100%;
+	align-items: center;
+	font-size: 5vw;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.ditails .subditails{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+.backcard{
+	top: 10%;
+	left: 15%;
+	background-image: url('./images/bg-card-back.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding: 55px;
+	box-shadow: 0 0 25px 0 #0000003e;
+}
+#inputzone form {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 90%;
+
+}
+#complete{
+	width: 100%;
+}
+#complete button{
+	width: 90%;
+}
+}
